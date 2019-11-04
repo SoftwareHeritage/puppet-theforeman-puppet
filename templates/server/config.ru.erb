@@ -22,11 +22,6 @@ ARGV << "--vardir"  << "<%= @vardir %>"
 ARGV << "<%= server_rack_argument %>"
 <% end -%>
 
-# always_cache_features is a performance improvement and safe for a master to
-# apply. This is intended to allow agents to recognize new features that may be
-# delivered during catalog compilation.
-ARGV << "--always_cache_features"
-
 # Rack middleware for Puppet 3 compatibility
 # See Debian bug #832536
 class Puppet3Compat
